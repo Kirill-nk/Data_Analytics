@@ -1,0 +1,19 @@
+import findspark
+findspark.init()
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.master("local[*]").getOrCreate()
+spark.conf.set("spark.sql.repl.eagerEval.enabled", True) # Property used to format output tables better
+spark
+
+Должен появиться такой код:
+
+"SparkSession - in-memory
+SparkContext
+Spark UI
+Version
+v3.5.0
+Master
+local[*]
+AppName
+pyspark-shell"
