@@ -17,3 +17,10 @@ Master
 local[*]
 AppName
 pyspark-shell"
+
+
+import pyspark.sql.functions as F
+from pyspark.sql.functions import mean, col
+
+from IPython.display import display, HTML
+display(HTML("<style>.container { width:90% !important; }</style>"))
